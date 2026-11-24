@@ -32,3 +32,4 @@ def save_application(name, income, loan_amount, credit_score, status):
 
     conn.commit()
     conn.close()
+    KeyboardInterrupt

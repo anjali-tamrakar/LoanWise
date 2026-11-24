@@ -1,28 +1,35 @@
 
+import joblib
+import pandas as pd
+
+model = joblib.load("loan_model.pkl")
+
 def check_eligibility(loan_amount, annual_income, credit_score):
 
-    # Validate annual income
     if annual_income <= 0:
         return False, "Invalid Annual Income"
 
-    # Validate loan amount
     if loan_amount <= 0:
         return False, "Invalid Loan Amount"
 
-    # Validate credit score
     if credit_score < 300 or credit_score > 850:
         return False, "Invalid Credit Score"
 
-    # Calculate loan ratio
     loan_ratio = loan_amount / annual_income
 
-    # Check credit score
-    if credit_score < 650:
-        return False, "Credit Score is too low."
+    input_data = pd.DataFrame(
+        [[annual_income, loan_amount, credit_score, loan_ratio]],
+        columns=[
+            "income",
+            "loan_amount",
+            "credit_score",
+            "loan_ratio"
+        ]
+    )
 
-    # Check loan ratio
-    elif loan_ratio > 0.4:
-        return False, "Loan amount exceeds allowed limit."
+    prediction = model.predict(input_data)[0]
 
-    else:
-        return True, "Eligible for the Loan."
+    if prediction == 1:
+        return True, "Eligible for the Loan (ML Prediction)."
+
+    return False, "Not Eligible for the Loan (ML Prediction)."
