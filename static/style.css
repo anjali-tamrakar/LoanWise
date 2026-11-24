@@ -1,0 +1,183 @@
+Here is your same CSS code, unchanged:
+
+css
+
+```css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172554;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #155eef;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #334155;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #155eef;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 85px 20px;
+    background: linear-gradient(135deg, #eaf1ff, #ffffff);
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #155eef;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1048bd;
+}
+
+/* Application Form */
+.form-card {
+    background: white;
+    max-width: 550px;
+    margin: 45px auto;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-card p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.form-card label {
+    display: block;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-card input:focus {
+    outline: none;
+    border-color: #155eef;
+}
+
+.form-card button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 45px 20px 60px;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #64748b;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 8px;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+}
+```

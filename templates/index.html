@@ -1,0 +1,102 @@
+Here is your same HTML code, unchanged:
+
+HTMLWrap linesCopy codePreview
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanWise - Smart Loan Eligibility</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="container">
+            <div class="logo">LoanWise.</div>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#apply">Apply Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Smart Financial Decisions,<br>Made Simple.</h1>
+
+                <p>
+                    Check your loan eligibility easily with LoanWise.
+                    Make smarter borrowing decisions.
+                </p>
+
+                <a href="#apply" class="btn">Check Eligibility</a>
+            </div>
+        </section>
+
+        <!-- Loan Application Form -->
+        <section class="container" id="apply">
+            <div class="form-card">
+
+                <h2>Loan Application Form</h2>
+                <p>Enter your details to check your loan eligibility.</p>
+
+                <form action="/submit" method="POST">
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Enter your full name" required>
+
+                    <label for="income">Annual Income (₹)</label>
+                    <input type="number" id="income" name="income"
+                        placeholder="Enter annual income" min="1" step="1" required>
+
+                    <label for="loan_amount">Loan Amount (₹)</label>
+                    <input type="number" id="loan_amount" name="loan_amount"
+                        placeholder="Enter loan amount" min="1" step="1" required>
+
+                    <label for="credit_score">Credit Score</label>
+                    <input type="number" id="credit_score" name="credit_score"
+                        placeholder="Enter credit score (300–850)"
+                        min="300" max="850" step="1" required>
+
+                    <button type="submit" class="btn">
+                        Check Loan Eligibility
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about container" id="about">
+            <h2>Why Choose LoanWise?</h2>
+
+            <p>
+                LoanWise helps users understand their estimated
+                loan eligibility through a simple digital process.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 LoanWise. All Rights Reserved.</p>
+        <p>Smart Financial Decisions Made Simple.</p>
+    </footer>
+
+</body>
+</html>
+```
